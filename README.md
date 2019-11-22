@@ -1,5 +1,7 @@
-# iss-tracker
+# [iss-tracker](https://iss-tracker-js.herokuapp.com/)
 A website that tracks the location of the ISS in real-time using Javascript and some APIs.
+
+[Link to website](https://iss-tracker-js.herokuapp.com/)
 
 # APIs used
 - <a href="https://wheretheiss.at/w/developer">Where the ISS at? API</a>
@@ -11,3 +13,6 @@ A website that tracks the location of the ISS in real-time using Javascript and 
   
 # Image
 <img src="images/iss-tracker.png" alt="iss-tracker.png">
+
+### Disclaimer
+Had to hard code the "Astronauts Aboard the ISS" list because Heroku doesn't do http requests, only https. The Open Notify API uses http and that API is what I used to get the astronauts aboard the ISS.
