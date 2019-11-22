@@ -1,5 +1,5 @@
 const API_URL_ISS = 'https://api.wheretheiss.at/v1/satellites/25544'; // ISS API
-const API_URL_PEOPLE = 'http://api.open-notify.org/astros.json'; // Open notify API
+// const API_URL_PEOPLE = 'http://api.open-notify.org/astros.json'; // Open notify API
 
 
 async function fetchData(url) {
@@ -38,15 +38,15 @@ function updateISSDataOnDOM(lat, lng, alt, vel) {
     document.getElementById('velocity').textContent = vel;
 }
 
-function updateAstronautsOnDOM(peopleAboardISS) {
-    var ulElement = document.getElementById('astronaut-list').firstElementChild;
-    peopleAboardISS.forEach(person => {
-        var liElement = document.createElement('li');
-        var text = document.createTextNode(person);
-        liElement.appendChild(text);
-        ulElement.appendChild(liElement);
-    });
-}
+// function updateAstronautsOnDOM(peopleAboardISS) {
+//     var ulElement = document.getElementById('astronaut-list').firstElementChild;
+//     peopleAboardISS.forEach(person => {
+//         var liElement = document.createElement('li');
+//         var text = document.createTextNode(person);
+//         liElement.appendChild(text);
+//         ulElement.appendChild(liElement);
+//     });
+// }
 
 
 function updateMarkerPosition(coords, marker) {
@@ -90,10 +90,10 @@ function initMap() {
             updateISSDataOnDOM(issData.lat, issData.lng, issData.alt, issData.vel);
             updateMarkerPosition(coords, marker);
         });
-    }, 1200);
+    }, 2000);
 }
 
 
-getPeopleAboardISS().then(people => {
-    updateAstronautsOnDOM(people);
-});
+// getPeopleAboardISS().then(people => {
+//     updateAstronautsOnDOM(people);
+// });
