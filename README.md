@@ -12,6 +12,11 @@ A website that tracks the location of the ISS in real-time using Javascript and 
   - Used for displaying a map with a marker.
   
 # Image
+
+Gif
+<img src="images/iss-tracker-website.gif" alt="iss-tracker-website.gif">
+
+Static image
 <img src="images/iss-tracker.png" alt="iss-tracker.png">
 
 ### Disclaimer
