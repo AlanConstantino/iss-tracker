@@ -18,6 +18,3 @@ Gif
 
 Static image
 <img src="images/iss-tracker.png" alt="iss-tracker.png">
-
-### Note
-I had to hard code the "Astronauts Aboard the ISS" list because Heroku doesn't do http requests, only https. The Open Notify API uses http and that API is what I used to get the names of the astronauts aboard the ISS.
