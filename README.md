@@ -18,3 +18,6 @@ Gif
 
 Static image
 <img src="images/iss-tracker.png" alt="iss-tracker.png">
+
+### Note
+I hard coded the astronauts aboard the ISS because the Open notify API for the astronauts doesn't serve its requests with HTTPS only HTTP which was causing a mixed-content error.
