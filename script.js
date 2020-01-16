@@ -1,5 +1,5 @@
 const API_URL_ISS = 'https://api.wheretheiss.at/v1/satellites/25544'; // ISS API
-const API_URL_PEOPLE = 'http://api.open-notify.org/astros.json'; // Open notify API
+// const API_URL_PEOPLE = 'http://api.open-notify.org/astros.json'; // Open notify API
 
 
 async function fetchData(url) {
@@ -21,14 +21,14 @@ async function getISSData() {
 }
 
 
-async function getPeopleAboardISS() {
-    const data = await fetchData(API_URL_PEOPLE);
-    const peopleAboardISS = [];
-    data.people.forEach(person => {
-        peopleAboardISS.push(person.name);
-    });
-    return peopleAboardISS;
-}
+// async function getPeopleAboardISS() {
+//     const data = await fetchData(API_URL_PEOPLE);
+//     const peopleAboardISS = [];
+//     data.people.forEach(person => {
+//         peopleAboardISS.push(person.name);
+//     });
+//     return peopleAboardISS;
+// }
 
 
 function updateISSDataOnDOM(lat, lng, alt, vel) {
@@ -38,15 +38,15 @@ function updateISSDataOnDOM(lat, lng, alt, vel) {
     document.getElementById('velocity').textContent = vel;
 }
 
-async function updateAstronautsOnDOM(peopleAboardISS) {
-    const ulElement = document.getElementById('astronaut-list').firstElementChild;
-    peopleAboardISS.forEach(person => {
-        const liElement = document.createElement('li');
-        const text = document.createTextNode(person);
-        liElement.appendChild(text);
-        ulElement.appendChild(liElement);
-    });
-}
+// async function updateAstronautsOnDOM(peopleAboardISS) {
+//     const ulElement = document.getElementById('astronaut-list').firstElementChild;
+//     peopleAboardISS.forEach(person => {
+//         const liElement = document.createElement('li');
+//         const text = document.createTextNode(person);
+//         liElement.appendChild(text);
+//         ulElement.appendChild(liElement);
+//     });
+// }
 
 
 function updateMarkerPosition(coords, marker) {
@@ -90,9 +90,8 @@ function initMap() {
             updateISSDataOnDOM(issData.lat, issData.lng, issData.alt, issData.vel);
             updateMarkerPosition(coords, marker);
         });
-    }, 2000);
+    }, 1500);
 }
 
-window.onload = () => {
-    getPeopleAboardISS().then(people => updateAstronautsOnDOM(people));
-}
+window.onload = () => initMap();
+// getPeopleAboardISS().then(people => updateAstronautsOnDOM(people));
