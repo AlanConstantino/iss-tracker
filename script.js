@@ -1,4 +1,4 @@
-const API_URL_ISS = 'http://api.wheretheiss.at/v1/satellites/25544'; // ISS API
+const API_URL_ISS = 'https://api.wheretheiss.at/v1/satellites/25544'; // ISS API
 const API_URL_PEOPLE = 'http://api.open-notify.org/astros.json'; // Open notify API
 
 
