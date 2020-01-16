@@ -1,7 +1,7 @@
-# [iss-tracker](https://iss-tracker-js.herokuapp.com/)
+# [iss-tracker](https://iss.alanconstantino.com)
 A website that tracks the location of the ISS in real-time using Javascript and some APIs.
 
-[Link to ISS tracker](https://iss-tracker-js.herokuapp.com/)
+[Link to ISS tracker](https://iss.alanconstantino.com)
 
 # APIs used
 - <a href="https://wheretheiss.at/w/developer">Where the ISS at? API</a>
