@@ -90,7 +90,7 @@ function initMap() {
             updateISSDataOnDOM(issData.lat, issData.lng, issData.alt, issData.vel);
             updateMarkerPosition(coords, marker);
         });
-    }, 1500);
+    }, 2000);
 }
 
 window.onload = () => initMap();
